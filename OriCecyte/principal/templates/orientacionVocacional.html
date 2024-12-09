@@ -1,0 +1,632 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CECyTE Orienta</title>
+
+    <link href="//fonts.googleapis.com/css?family=Mukta:300,400,500" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/01.css' %}">
+
+
+    <!-- Template CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+  </head>
+  <body>
+<!--header-->
+<header id="site-header" class="fixed-top">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+          <h1> <a class="navbar-brand" href="{% url 'index' %}">
+                  <span class=""></span> CECyTE Orienta
+              </a></h1>
+
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-lg-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item @@about__active">
+                    <a class="nav-link" href="{% url 'sobre_nosotros' %}">SOBRE NOSOTROS</a>
+                </li>
+                <li class="nav-item @@services__active">
+                    <a class="nav-link" href="{% url 'servicios' %}">SERVICIOS</a>
+                </li>
+                <li class="nav-item @@contact__active">
+                    <a class="nav-link" href="{% url 'reservar' %}">RESERVAR</a>
+                </li>
+                <li class="nav-item @@contact__active">
+                    <a class="nav-link" href="{% url 'contact' %}">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+  </div>
+</header>
+<!--/header-->
+<section class="w3l-about-breadcrumb">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-4 py-md-3">
+            <h2 class="title">Orientacion Vocacional</h2>
+        </div>
+    </div>
+</section>
+<section class="w3l-servicesblock py-5" id="about">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="container py-lg-4 py-md-3">
+                <span class="title-small mb-2">Que es la Orientacion Vocacional</span>
+                <h3 class="title-big mx-0"> Orientacion Vocacional</h3>
+                <p class="mt-lg-4 mt-3">Elegir una carrera o un camino profesional es una de las decisiones más 
+                  importantes en la vida de un estudiante. La orientación vocacional es un proceso que te guía en 
+                  la identificación de tus intereses, habilidades, valores y metas, con el fin de ayudarte a tomar 
+                  decisiones informadas sobre tu futuro académico y laboral. </p>
+                  <p class="mt-lg-4 mt-3">En esta etapa de tu vida, es normal sentirte abrumado por la cantidad de opciones 
+                    disponibles y por las expectativas que otros pueden tener sobre tu futuro. La orientación vocacional está 
+                    diseñada para apoyarte en este proceso, proporcionándote herramientas y recursos que te permitan:<br>
+
+                    •Conocer tus fortalezas y áreas de mejora.<br>
+                    •Identificar tus intereses y lo que te apasiona.<br>
+                    •Descubrir qué campos de estudio o carreras se alinean con tu perfil.<br>
+                    •Explorar las tendencias del mercado laboral y las demandas actuales.<br>
+                    •Tomar decisiones basadas en información sólida y en tus propias aspiraciones. </p>
+
+                  <p class="mt-lg-4 mt-3"> La orientación vocacional no solo se trata de elegir una carrera, 
+                    sino de entender que cada decisión que tomes en tu camino profesional debe estar conectada 
+                    con tus sueños y valores personales. Es un viaje de autodescubrimiento y planificación que 
+                    te permitirá alcanzar tus objetivos y contribuir al mundo con tus talentos únicos.</p> 
+  
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+  <form action="" method="post">
+    <section class="form-register">
+        <h4 class="orientacion_form">Test Orientacion Vocacional</h4>
+
+        <!-- Pregunta 1 -->
+        <label for="pregunta1">1. ¿Qué actividad disfrutas más?</label>
+        <select class="controls" id="pregunta1" name="pregunta1">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Resolver problemas matemáticos o analizar datos.</option>
+            <option value="b">b) Ayudar a otras personas o brindar apoyo emocional.</option>
+            <option value="c">c) Diseñar, dibujar o escribir.</option>
+            <option value="d">d) Construir cosas o experimentar con tecnología.</option>
+        </select><br><br>
+
+        <!-- Pregunta 2 -->
+        <label for="pregunta2">2. ¿Qué tipo de retos prefieres enfrentar?</label>
+        <select class="controls" id="pregunta2" name="pregunta2">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Problemas lógicos o numéricos.</option>
+            <option value="b">b) Trabajar en equipo para resolver conflictos.</option>
+            <option value="c">c) Crear algo único o desarrollar ideas innovadoras.</option>
+            <option value="d">d) Reparar o programar dispositivos.</option>
+        </select><br><br>
+
+        <!-- Pregunta 3 -->
+        <label for="pregunta3">3. ¿Qué asignaturas disfrutas más en la escuela?</label>
+        <select class="controls" id="pregunta3" name="pregunta3">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Matemáticas, Física o Química.</option>
+            <option value="b">b) Psicología, Biología o Sociología.</option>
+            <option value="c">c) Arte, Literatura o Historia.</option>
+            <option value="d">d) Computación, Tecnología o Talleres prácticos.</option>
+        </select><br><br>
+
+        <!-- Pregunta 4 -->
+        <label for="pregunta4">4. ¿Cómo prefieres trabajar?</label>
+        <select class="controls" id="pregunta4" name="pregunta4">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Analizando datos o siguiendo procesos organizados.</option>
+            <option value="b">b) Ayudando directamente a las personas.</option>
+            <option value="c">c) Expresando ideas creativas o innovadoras.</option>
+            <option value="d">d) Aplicando habilidades técnicas o manuales.</option>
+        </select><br><br>
+
+        <!-- Pregunta 5 -->
+        <label for="pregunta5">5. ¿Qué actividades disfrutas en tu tiempo libre?</label>
+        <select class="controls" id="pregunta5" name="pregunta5">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Resolver acertijos, leer sobre ciencia o jugar videojuegos estratégicos.</option>
+            <option value="b">b) Participar en actividades sociales o de voluntariado.</option>
+            <option value="c">c) Dibujar, escribir o tomar fotografías.</option>
+            <option value="d">d) Experimentar con gadgets o reparar cosas en casa.</option>
+        </select><br><br>
+
+        <!-- Pregunta 6 -->
+        <label for="pregunta6">6. ¿Qué tipo de contenido buscas en internet o redes sociales?</label>
+        <select class="controls" id="pregunta6" name="pregunta6">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Artículos de ciencia, tecnología o economía.</option>
+            <option value="b">b) Consejos para mejorar la comunicación o la salud emocional.</option>
+            <option value="c">c) Tutoriales creativos como dibujo, escritura o música.</option>
+            <option value="d">d) Tecnología, videojuegos o ingeniería.</option>
+        </select><br><br>
+
+        <!-- Pregunta 7 -->
+        <label for="pregunta7">7. ¿Qué habilidades tienes o quisieras desarrollar más?</label>
+        <select class="controls" id="pregunta7" name="pregunta7">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Pensamiento lógico y resolución de problemas.</option>
+            <option value="b">b) Comunicación y empatía.</option>
+            <option value="c">c) Creatividad y originalidad.</option>
+            <option value="d">d) Uso de herramientas y tecnología avanzada.</option>
+        </select><br><br>
+
+        <!-- Pregunta 8 -->
+        <label for="pregunta8">8. ¿Cómo te imaginas tu trabajo ideal?</label>
+        <select class="controls" id="pregunta8" name="pregunta8">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) En un laboratorio, oficina o investigando soluciones complejas.</option>
+            <option value="b">b) Ayudando a personas, enseñando o en áreas relacionadas con la salud.</option>
+            <option value="c">c) Creando proyectos artísticos, audiovisuales o culturales.</option>
+            <option value="d">d) Reparando, programando o implementando soluciones técnicas.</option>
+        </select><br><br>
+
+        <!-- Pregunta 9 -->
+        <label for="pregunta9">9. ¿Qué tipo de impacto te gustaría tener en el mundo?</label>
+        <select class="controls" id="pregunta9" name="pregunta9">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Resolver problemas globales a través de la ciencia o la ingeniería.</option>
+            <option value="b">b) Mejorar la vida de las personas a través del apoyo o la enseñanza.</option>
+            <option value="c">c) Inspirar a otros a través del arte o las ideas.</option>
+            <option value="d">d) Desarrollar tecnología que facilite la vida cotidiana.</option>
+        </select><br><br>
+
+        <!-- Pregunta 10 -->
+        <label for="pregunta10">10. Si pudieras tomar un curso mañana, ¿sobre qué sería?</label>
+        <select class="controls" id="pregunta10" name="pregunta10">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="a">a) Física avanzada, programación o estadística.</option>
+            <option value="b">b) Psicología, primeros auxilios o pedagogía.</option>
+            <option value="c">c) Fotografía, diseño gráfico o escritura creativa.</option>
+            <option value="d">d) Robótica, electrónica o software.</option>
+        </select><br><br>  
+        <input class="botons" type="submit" value="Agregar Registro">
+    </section>
+    </form>
+
+</section>
+<!-- <section class="w3l-specification-6 py-5">
+    <div class="specification-6-mian py-lg-5 py-md-4 py-2">
+        <div class="container">
+            <div class="align-counter-6-inf-cols row">
+                <div class="counter-6-inf-left col-lg-6">
+                    
+                </div>
+                <div class="counter-6-inf-right col-lg-6">
+                    <h3 class="title-big">We provide a variety of services both to our new and regular customers.</h3>
+                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, aliquid non? Suscipit numquam
+                        obcaecati necessitatibus voluptas. Molestias, sint atque aliquid magnam magni, fuga iste fugit
+                        iusto maiores vero soluta voluptates?</p>
+                    <a class="btn btn-style btn-primary mt-lg-5 mt-4" href="about.html"> Discover More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- //specification-6-->
+<!-- /homeblock2-->
+<section class="w3l-homeblock2 py-5">
+  <h2 class="recursos">RECURSOS</h2>
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 grids-feature">
+                <div class="area-box">
+                    <h4><a href="https://www.aacademica.org/000-012/837.pdf" class="title-head">LA GUÍA PRÁCTICA PARA LA ELECCIÓN
+                      DE LA CARRERA
+                      </a></h4>
+                    <p>En la actualidad, la Psicología de la Orientación - con una mirada holística, contextual y preventiva-, 
+                      plantea entre sus principales objetivos acompañar a las/os jóvenes en la construcción
+                      de sus proyectos educativos y laborales, en la adquisición de las
+                      competencias necesarias para tomar decisiones y en su preparación para afrontar las transiciones por vivir
+                        et.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-md-0 mt-5">
+                <div class="area-box">
+                    <h4><a href="https://youtu.be/IOyGoIovLNg?si=wx6OoJ7STSj5DZn4" class="title-head">COMO ENCONTRAR TU VOCACION</a></h4>
+                    <p>A la hora de construir un proyecto de vida, es fundamental tener en cuenta nuestros gustos e 
+                      intereses, conocer la oferta educativa y laboral, definir nuestras expectativas de trabajo y 
+                      conversar con personas que puedan brindarnos apoyo.
+                        et.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-5">
+                <div class="area-box">
+                    <h4><a href="https://www.fundacionbertelsmann.org/wp-content/uploads/2023/05/LIBRO_EFPJ_COMPLETO_LQ.pdf" class="title-head">ORIENTAR TU TOMA DE DECISICIONES </a></h4>
+                    <p>Elegir la carrera profesional es una de las grandes decisiones personales que
+                      todos los jóvenes deben tomar en su vida. No se trata de una decisión única
+                      ni fácil, hay que recorrer un largo camino lleno de bifurcaciones y a veces
+                      con muchas encrucijadas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //homeblock2-->
+<!-- middle -->
+<div class="w3l-middle py-5">
+    <div class="container py-lg-5 py-md-4">
+            <h3 class="title-small">ORIENTACION VOCACIONAL</h3>
+            <h3 class="title-big mb-4">Elige una carrera que te apasione, porque cuando haces lo que amas, el éxito se convierte en una consecuencia natural de tu esfuerzo.</h3>
+            <div class="buttons mt-md-5 mt-4">
+            </div>
+    </div>
+</div>
+<!-- //middle -->
+<!-- <section class="w3l-team section py-5" id="team">
+    <div class="container py-lg-5 py-md-4">
+        <h5 class="title-small text-center">Our team</h5>
+        <h3 class="title-big text-center mb-md-5 mb-4">Team Members</h3>
+        <div class="row">
+            <div class="section_content teamy-team">
+                <div class="col-lg-3 col-6">
+                    <div class="teamy teamy_style1 teamy_mask-circle">
+                        <div class="teamy_layout">
+                            <div class="teamy_preview">
+                                <img src="assets/images/team1.jpg" class="radius-image img-fluid w-100" alt="The demo photo">
+                            </div>
+                            <div class="teamy_back">
+                                <div class="teamy_back-inner">
+                                    <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-dribbble"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-twitter"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-envelope-o"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamy_content">
+                            <a href="#url" class="teamy_name">Suzan Lois</a>
+                            <span class="teamy_post">Barista at coffeebean</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="teamy teamy_style1 teamy_mask-circle">
+                        <div class="teamy_layout">
+                            <div class="teamy_preview">
+                                <img src="assets/images/team2.jpg" class="radius-image img-fluid w-100" alt="The demo photo">
+                            </div>
+                            <div class="teamy_back">
+                                <div class="teamy_back-inner">
+                                    <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-dribbble"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-twitter"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-envelope-o"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamy_content">
+                            <a href="#url" class="teamy_name">Dora Caelan</a>
+                            <span class="teamy_post">Barista at coffeebean</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mt-lg-0 mt-5">
+                    <div class="teamy teamy_style1 teamy_mask-circle">
+                        <div class="teamy_layout">
+                            <div class="teamy_preview">
+                                <img src="assets/images/team3.jpg" class="radius-image img-fluid w-100" alt="The demo photo">
+                            </div>
+                            <div class="teamy_back">
+                                <div class="teamy_back-inner">
+                                    <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-dribbble"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-twitter"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-envelope-o"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamy_content">
+                            <a href="#url" class="teamy_name">Rosanna Pattie</a>
+                            <span class="teamy_post">Barista at coffeebean</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mt-lg-0 mt-5">
+                    <div class="teamy teamy_style1 teamy_mask-circle">
+                        <div class="teamy_layout">
+                            <div class="teamy_preview">
+                                <img src="assets/images/team4.jpg" class="radius-image img-fluid w-100" alt="The demo photo">
+                            </div>
+                            <div class="teamy_back">
+                                <div class="teamy_back-inner">
+                                    <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-dribbble"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-twitter"></i> </a>
+                                    <a href="#0" class="social"> <i class="fa fa-envelope-o"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamy_content">
+                            <a href="#url" class="teamy_name">Rose Alpha</a>
+                            <span class="teamy_post">Barista at coffeebean</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="w3l-footer-29-main">
+  <div class="footer-29 py-5">
+    <div class="container py-lg-4 py-sm-3">
+    <div class="row footer-top-29">
+        <div class="col-lg-5 footer-list-29 footer-1">
+        <h2><a href="{% url 'index' %}" class=""><span class=""></span> CECyTE Orienta</a></h2>
+        <p>CECyTE Orienta - Tu espacio de orientación y consejería. Encuentra el apoyo, 
+            los recursos y las herramientas necesarias para tu bienestar y desarrollo en un solo lugar.
+            Juntos, construimos tu mejor versión.
+        </p>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+        <h6 class="footer-title-29">Contacto</h6>
+
+        <div class="column2">
+            <div class="mb-2">
+            <span>Direccion :</span>
+            <p class="contact-para d-inline">Av. Juarez S/N, La Magdalena Tetela, Acajete, Puebla.</p>
+            </div>
+            <div class="">
+            <span>E-mail :</span><a href="mailto:info@mail.com">plantelmagdalena@cecytepuebla.edu.mx</a>
+            </div>
+            <div class="mt-2">
+            <span>Telefono :</span><a href="tel: +(21)-255-886-1234"> +52 (223)275-5989</a>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    </div>
+</div>
+<div class="bottom-copies text-center">
+    <div class="container">
+    <p class="copy-footer-29">© 2024 CECyTE Orienta. Todos los derechos reservados | Diseñado por Mi(Yo). </p>
+    </div>
+</div>
+  <!-- move top -->
+  <button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-angle-up"></span>
+  </button>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- //move top -->
+</section>
+
+<!-- Template JavaScript -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+<script src="{% static 'js/theme-change.js' %}"></script>
+
+<!-- js for portfolio lightbox -->
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<script src="{% static 'js/jquery.chocolat.js' %} "></script>
+<!--light-box-files -->
+<script type="text/javascript ">
+  $(function () {
+    $('.w3_agile_portfolio_grid a').Chocolat();
+  });
+</script>
+<!-- /js for portfolio lightbox -->
+
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+
+<!-- script for testimonials -->
+<script>
+  $(document).ready(function () {
+    $('.owl-testimonial').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        480: {
+          items: 1,
+          nav: true
+        },
+        667: {
+          items: 1,
+          nav: true
+        },
+        1000: {
+          items: 1,
+          nav: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for testimonials -->
+
+<!-- script for blog slider -->
+<script>
+  $(document).ready(function () {
+    $('.owl-two').owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        992: {
+          items: 2,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for blog slider -->
+
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+
+<!-- script for banner slider-->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script -->
+
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
